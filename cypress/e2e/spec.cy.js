@@ -28,7 +28,7 @@ describe("Testing Telnyx web-site", () => {
     homePage.productsModal().should("be.visible");
   });
 
-  it("Test 3  - verify Solutions button in the header", () => {
+  it("Test 3 - verify Solutions button in the header", () => {
     homePage.visitHomePage();
     homePage.solutionsButtonClick();
     homePage.solutionsModal().should("be.visible");
@@ -38,7 +38,7 @@ describe("Testing Telnyx web-site", () => {
       .should("have.text", "Solutions for scaling your business");
   });
 
-  it("Test 4  - navigation and filtering on Solutions page", () => {
+  it("Test 4 - navigation and filtering on Solutions page", () => {
     solutionsPage.solutionsPageVisit();
     solutionsPage.useCasesButtonClick();
     solutionsPage.useCasesSectionTitle().should("have.text", "USE CASES");
@@ -50,7 +50,7 @@ describe("Testing Telnyx web-site", () => {
       .should("have.text", "1 filter selected");
   });
 
-  it("Test 5  - use cases navigation", () => {
+  it("Test 5 - use cases navigation", () => {
     solutionsPage.solutionsPageVisit();
     solutionsPage.useCasesButtonClick();
     solutionsPage.accountNotificationsClick();
@@ -85,13 +85,11 @@ describe("Testing Telnyx web-site", () => {
       .should("include.text", "benefits");
     pricingPage.allBenefitsBlocks().should("have.length", 3);
     pricingPage
-      .firstBenefitBlockTitle()
+      .benefitBlockTitle(1)
       .should("include.text", "Free in-house support");
+    pricingPage.benefitBlockTitle(2).should("include.text", "Portal access");
     pricingPage
-      .secondBenefitBlockTitle()
-      .should("include.text", "Portal access");
-    pricingPage
-      .thirdBenefitBlockTitle()
+      .benefitBlockTitle(3)
       .should("include.text", "Automatic discounts");
   });
 

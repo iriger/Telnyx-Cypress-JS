@@ -66,16 +66,16 @@ export class MessagingPage {
       this.shortCodeTab().click();
     }
     countryFilterClick() {
-      this.countryFilterButton().click();
+      this.countryFilterButton().click({force: true});
     }
     countrySelected() {
-      this.countrySelection().contains("France").click();
+      this.countrySelection().contains("France").click({force: true});
     }
     currencyFilterClick() {
-      this.currencyFilterButton().click();
+      this.currencyFilterButton().click({force: true});
     }
     currencySelected() {
-      this.currencySelection().contains("EUR").click();
+      this.currencySelection().contains("EUR").click({force: true});
     }
   }
   

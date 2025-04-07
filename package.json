@@ -4,6 +4,8 @@
   "description": "Telnyx-Cypress-JS project",
   "main": "index.js",
   "scripts": {
+    "test:electron": "cypress run --config-file configs/electron.config.js",
+    "test:firefox": "cypress run --config-file configs/firefox.config.js",
     "cy:open": "cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/iriger/Telnyx-Cypress-JS.git"
   },
-  "keywords": ["Telnyx","Cypress", "POM", "JS"],
+  "keywords": [
+    "Telnyx",
+    "Cypress",
+    "POM",
+    "JS"
+  ],
   "author": "Iryna Germash",
   "license": "ISC",
   "bugs": {
@@ -19,6 +26,8 @@
   },
   "homepage": "https://github.com/iriger/Telnyx-Cypress-JS#readme",
   "devDependencies": {
-    "cypress": "^14.2.0"
+    "cypress": "^14.2.0",
+    "cypress-xpath": "^2.0.1",
+    "dotenv": "^16.4.7"
   }
 }
